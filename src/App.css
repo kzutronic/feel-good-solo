@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css?family=Iceland");
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+
+body {
+  background: #020304;
+}
+.App {
+  position: relative;
+  top: 0px;
+  background: 020304;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.App-color-bg {
+  animation: colorchange 60s infinite;
+}
+
+@keyframes colorchange {
+  0% {
+    background: #020304;
+  }
+  25% {
+    background: #9d00ff;
+  }
+  50% {
+    background: blue;
+  }
+  75% {
+    background: red;
+  }
+  100% {
+    background: #020304;
+  }
+}
+
+.sun {
+  position: absolute;
+  left: -100px;
+  top: 100px;
+  width: 160px;
+  height: 160px;
+  background-color: yellow;
+  margin-left: calc(50% - 100px);
+  border-radius: 50%;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+    0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+  animation: sunAnimation 60s linear infinite;
+}
+
+@keyframes sunAnimation {
+  0% {
+    left: 100%;
+    top: 90%;
+  }
+
+  50% {
+    left: -25%;
+    top: -20%;
+  }
+
+  100% {
+    left: -25%;
+    top: -30%;
+  }
+}
+
+.moon {
+  position: absolute;
+  left: -100px;
+  top: 100px;
+  width: 80px;
+  height: 80px;
+  background-color: #ff6600;
+  margin-left: calc(50% - 100px);
+  border-radius: 50%;
+  box-shadow: 0 0 15px #fff, 0 0 35px #228dff, 0 0 40px #228dff,
+    0 0 50px #228dff, 0 0 75px #228dff;
+  animation: moonAnimation 60s linear infinite;
+}
+
+@keyframes moonAnimation {
+  0% {
+    left: 90%;
+    top: 80%;
+  }
+  50% {
+    left: 90%;
+    top: 80%;
+  }
+
+  100% {
+    left: -20%;
+    top: -20%;
+  }
+}
+
+.landscape {
+  position: fixed;
+  left: 0px;
+  bottom: 45%;
+  width: 200%;
+  height: 150px;
+  z-index: 1;
+}
+
+.buttons {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 999;
+}
+
+.lights-container {
+  position: fixed;
+  left: -50%;
+  width: 201%;
+  height: 82%;
+  bottom: 0px;
+  z-index: 900;
+  perspective: 120px;
+}
+
+.lights-perspectived {
+  background: rgba(100, 100, 100, 0);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d; /* Safari 3-8  */
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(45deg); /* Safari 3-8  */
+  transform: rotateX(45deg) rotateZ(0deg);
+}
+
+.light {
+  position: absolute;
+  bottom: 0px;
+  height: 100%;
+  width: 8px;
+  background: #dff;
+  z-index: 1000;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+    0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+  animation: uza 1s linear infinite;
+}
+
+.grid-container {
+  position: fixed;
+  background: #020324;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  -webkit-filter: drop-shadow(5px -10px 6px #e3f224);
+  z-index: 1;
+}
+
+.title {
+  position: absolute;
+  z-index: 20;
+  top: 15%;
+  left: calc(50% - 250px);
+  width: 500px;
+  margin: 0 auto;
+  font-size: 120px;
+  color: #228dff;
+  font-family: Iceland;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+    0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+  -webkit-animation: spiny 3s linear infinite;
+}
+
+.subtitle {
+  position: absolute;
+  z-index: 10;
+  top: calc(15% + 60px);
+  left: calc(50% - 100px);
+  color: #f0d;
+  font-size: 64px;
+  width: 200px;
+  margin: 0 auto;
+  transform: rotateZ(-12deg);
+  font-family: Monoton;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
+    0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 75px #ff1177;
+}
+
+.how-to {
+  color: white;
+  position: absolute;
+  z-index: 999;
+  top: calc(15% + 160px);
+  left: calc(50% - 200px);
+  width: 400px;
+  text-align: center;
+  font-size: 24px;
+  font-family: Iceland;
+}
+
+@-webkit-keyframes spiny {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    -webkit-transform-origin: 0% 0% 5;
+  }
+  25% {
+    -webkit-transform: rotateY(15deg);
+    -webkit-transform-origin: 0% 0% 5;
+  }
+  50% {
+    -webkit-transform: rotateY(30deg);
+    -webkit-transform-origin: 0% 0% -5;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+    -webkit-transform-origin: 0% 0% 5;
+  }
+}
+
+@-webkit-keyframes mooove {
+  0% {
+    -webkit-transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(200px);
+  }
+  50% {
+    -webkit-transform: translateX(-200px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+  }
+}
+
+@keyframes uza {
+  0% {
+    bottom: 0px;
+  }
+
+  100% {
+    bottom: 100%;
+  }
+}

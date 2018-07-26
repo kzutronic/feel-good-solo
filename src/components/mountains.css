@@ -1,0 +1,38 @@
+.mountains-wrapper {
+  position: relative;
+  width: 100%;
+
+  left: 0px;
+  height: 150px;
+}
+
+.mountain {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  animation: appearing 5s linear, slide1 60s linear infinite;
+}
+
+.mountain img {
+  width: 200%;
+  height: 350px;
+  object-fit: cover;
+}
+
+@keyframes slide1 {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -1200px;
+  }
+}
+
+@keyframes appearing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

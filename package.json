@@ -1,0 +1,35 @@
+{
+  "name": "feelgood",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://kzutronic.github.io/feel-good-solo/",
+  "dependencies": {
+    "postprocessing": "^4.4.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-icons": "^2.2.7",
+    "react-scripts": "1.1.1",
+    "three": "^0.91.0",
+    "tone": "^0.11.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "babel-env": "^2.4.1",
+    "babel-eslint": "^8.2.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.19.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-watch": "^3.1.3",
+    "gh-pages": "^1.2.0",
+    "prettier": "^1.10.2"
+  }
+}

@@ -1,0 +1,12 @@
+.play-button {
+  width: 48px;
+  height: 48px;
+  background: #090909;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgba(200, 40, 200, 0.9);
+  border: 4px solid #ddd;
+}
